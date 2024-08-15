@@ -1,0 +1,187 @@
+@font-face {
+  font-family: Mono;
+  src: url("./assets/font/HoltwoodOneSC.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 150%;
+  font-family: Mono;
+  background-color: rgb(19, 19, 19);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+nav {
+  width: 30%;
+  margin: 2em auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 0.25em;
+}
+
+.logo img{
+  width: 5vh;
+  border-radius: 0.5em;
+}
+
+.nav-items {
+  display: flex;
+  gap: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(3, 49, 120);
+}
+
+.card {
+  position: relative;
+  width: 460px;
+  height: 400px;
+  margin: 2em auto;
+  padding: 2em;
+  border-radius: 1.5em;
+  flex-direction: column;
+  gap: 0.5em;
+  background-color: #272727;
+  overflow: hidden;
+}
+
+.card-title {
+  color: #fff;
+  padding-bottom: 1em;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  padding: 0.5em 0 0 0 ;
+  gap: 0.5em;
+}
+
+.pad {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #333333;
+  border-radius: 0.5rem;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pad.active {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.card .row:nth-child(3) .pad:nth-child(1),
+.card .row:nth-child(3) .pad:nth-child(2),
+.card .row:nth-child(3) .pad:nth-child(3) {
+  opacity: 0.35;
+}
+
+.card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  color: white;
+  overflow-y: auto;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+  border-radius: 4em;
+  font-family: cursive;
+  padding: 0.5em 1em;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.img {
+  width: 100%;
+  height: 200px;
+  margin: 1em 0;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.copy {
+  margin: 0.5em 0;
+  padding: 1.5em;
+  border-radius: 1em;
+  background-color: #fff;
+  color: #000;
+}
+
+.copy h1 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0.35em;
+}
+
+.copy p {
+  font-size: 14px;
+  line-height: 150%;
+  color: grey;
+}
+
+.copy.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.card-item .copy.link a{
+  text-decoration: none;
+}
+.card-item {
+  position: relative;
+}
+
+.close-btn{
+  font-weight: 800;
+  color: rgb(20, 37, 134);
+}
+@media (max-width: 900px) {
+  nav {
+    width: 100%;
+    padding: 2em;
+  }
+  .card {
+    width: 360px;
+    height: 320px;
+    gap: 0.25em;
+  }
+  .row {
+    gap: 0.25em;
+  }
+  .pad {
+    width: 40px;
+    height: 40px;
+  }
+}
