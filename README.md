@@ -1,6 +1,6 @@
 # magicCalender
 
-Use HTML, CSS, JavaScript, and GSAP to make stunning, responsive, interactive calendar cards!
+**Use HTML, CSS, JavaScript, and GSAP to make stunning, responsive, interactive calendar cards.You can use it as your component as well.**
 
 <box  style='        display: flex;
         justify-content: center;
